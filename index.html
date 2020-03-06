@@ -1,0 +1,33 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Welcome to your task list</h1>
+    <h2>Best tool in town</h2>
+    <div id="newTaskPanel">
+        <input type="text" id="newTask" placeholder="inserisci qui il tuo task!" />
+        <input type="button" value="Aggiungi Task" onclick="aggiungiTask()" />
+    </div>
+    <div id="taskList">
+
+    </div>
+
+    <script>
+
+        function aggiungiTask() {
+            //vogliamo prendere il testo che c'è dentro all'input text
+            let casellaDiTesto = document.querySelector("#newTask")
+            let testoNuovoTask = casellaDiTesto.value;
+            //vogliamo prendere il riferiemnto alla nostra lista
+            let list = document.querySelector("#taskList")
+            //vogliamo aggiungere un <li> dentro la nostra lista
+            list.innerHTML += "<p>" + new Date() + ": " + testoNuovoTask + "</p>"
+            //cancellare quello che c'è scritto dentro
+            casellaDiTesto.value = ""
+        }
+
+    </script>
+</body>
+
+</html>

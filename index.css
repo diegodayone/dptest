@@ -1,0 +1,24 @@
+h1 {
+    color: red;
+}
+
+body {
+    background: gainsboro;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#taskList {
+    background: pink;
+    border: 1px solid red;
+    border-radius: 20px;
+}
+
+#newTaskPanel {
+    display: flex;
+}
+
+#newTaskPanel input[type=text] {
+    flex-grow: 1;
+}
